@@ -59,5 +59,4 @@ In addition to the core features taught by the course instructors, I added some 
 
 To explore the project and learn more, visit the GitHub page: [GitHub Project Page](https://github.com/your_username/food-ordering-project)
 
-Best regards,
-Emin Kumru
+Best regards.
