@@ -31,7 +31,7 @@ In addition to the core features taught by the course instructors, I added some 
 
 ## How to Use?
 
-1. Clone the project: `git clone https://github.com/your_username/food-ordering-project.git`
+1. Clone the project: `git clone https://github.com/your_username/homemarket.git`
 2. Install the necessary dependencies: `npm install`
 3. Start the project: `npm run dev`
 4. View the project in your browser at `http://localhost:3000`.
