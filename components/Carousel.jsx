@@ -40,11 +40,11 @@ const Carousel = () => {
           <div className="mt-48  text-white flex flex-col items-start gap-y-10">
             <Title addClass="text-3xl">Homemarket - Freshness at Your Doorstep</Title>
             <p className="text-sm sm:w-2/5 w-full">
-            Experience the Sunday Market from the comfort of your home! We deliver fresh fruits,
+            {`Experience the Sunday Market from the comfort of your home! We deliver fresh fruits,
             vegetables, and local delicacies straight to your doorstep. No hassle, just the best
             picks at Sunday Market prices! <br />
             Get your hands on the season's finest produce—delivered fresh as if you handpicked it
-            yourself, all without leaving your home.
+            yourself, all without leaving your home.`}
             </p>
             <button className="btn-primary">Order Now</button>
           </div>
