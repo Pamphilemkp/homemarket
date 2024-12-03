@@ -27,7 +27,7 @@ const Carousel = () => {
       <div className="absolute top-0 left-0 w-full h-full">
         <div className="relative h-full w-full">
           <Image
-            src="/images/chilipepper.jpg"
+            src="/images/homemart.png"
             alt=""
             layout="fill"
             priority
