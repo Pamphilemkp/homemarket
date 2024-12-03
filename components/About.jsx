@@ -11,14 +11,14 @@ const About = () => {
           </div>
         </div>
         <div className="md:w-1/2 ">
-          <Title addClass="text-[40px]">We Are Feane</Title>
+          <Title addClass="text-[40px]">We Are Homemarket</Title>
           <p className="my-5 flex flex-col items-center">
-            There are many variations of passages of Lorem Ipsum available, but
-            the majority have suffered alteration in some form, by injected
-            humour, or randomised words which don`t look even slightly
-            believable. If you are going to use a passage of Lorem Ipsum, you
-            need to be sure there isn`t anything embarrassing hidden in the
-            middle of text. All
+          Your connection to the vibrant Sunday Market—without leaving your home.
+          We bring the freshest produce, handmade goods, and market treasures right
+          to your doorstep at unbeatable prices. Experience the best of local shopping,
+          hassle-free, with the same quality and affordability you love. At Home Market,
+          we make it simple to enjoy the Sunday Market’s charm, comfort, and savings—all
+          delivered to your place!
           </p>
           <button className="btn-primary">Read More</button>
         </div>

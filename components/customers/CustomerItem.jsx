@@ -1,17 +1,15 @@
 import Image from "next/image";
 
-const CustomerItem = ({ imgSrc }) => {
+const CustomerItem = ({ imgSrc, fullname, description }) => {
   return (
     <div className="mt-5 mx-4">
       <div className="p-6 bg-secondary text-white rounded-[5px]">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam
+          {description }
         </p>
         <div className="flex flex-col mt-4">
-          <span className="text-lg font-semibold">Moana Michell</span>
-          <span className="text-[15px]">magna aliqua</span>
+          <span className="text-lg font-semibold">{fullname}</span>
+          <span className="text-[15px]">Homemarket</span>
         </div>
       </div>
 
@@ -21,7 +19,7 @@ const CustomerItem = ({ imgSrc }) => {
       >
         <Image
           src={imgSrc}
-          alt=""
+        alt={fullname}
           layout="fill"
           objectFit="contain"
           className="rounded-full"

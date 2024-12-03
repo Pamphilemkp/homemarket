@@ -38,24 +38,25 @@ const Carousel = () => {
       <Slider {...settings}>
         <div>
           <div className="mt-48  text-white flex flex-col items-start gap-y-10">
-            <Title addClass="text-6xl">Fast Food Restaurant</Title>
+            <Title addClass="text-3xl">Homemarket - Freshness at Your Doorstep</Title>
             <p className="text-sm sm:w-2/5 w-full">
-              Doloremque, itaque aperiam facilis rerum, commodi, temporibus
-              sapiente ad mollitia laborum quam quisquam esse error unde.
-              Tempora ex doloremque, labore, sunt repellat dolore, iste magni
-              quos nihil ducimus libero ipsam.
+            Experience the Sunday Market from the comfort of your home! We deliver fresh fruits,
+            vegetables, and local delicacies straight to your doorstep. No hassle, just the best
+            picks at Sunday Market prices! <br />
+            Get your hands on the season's finest produce—delivered fresh as if you handpicked it
+            yourself, all without leaving your home.
             </p>
             <button className="btn-primary">Order Now</button>
           </div>
         </div>
         <div>
           <div className="relative text-white top-48 flex flex-col items-start gap-y-10">
-            <Title addClass="text-6xl">Fast Food Restaurant</Title>
+            <Title addClass="text-3xl">The Best of Sunday Market, Deliveredt</Title>
             <p className="text-sm sm:w-2/5 w-full">
-              Doloremque, itaque aperiam facilis rerum, commodi, temporibus
-              sapiente ad mollitia laborum quam quisquam esse error unde.
-              Tempora ex doloremque, labore, sunt repellat dolore, iste magni
-              quos nihil ducimus libero ipsam.
+            Why step out when we bring the vibrant Sunday Market to you? Enjoy the same low prices
+            and variety you love, without the crowd or commute. <br />
+            From organic greens to handmade goods, discover the joy of Sunday shopping—delivered with
+            a smile to your place!
             </p>
             <button className="btn-primary">Order Now</button>
           </div>
