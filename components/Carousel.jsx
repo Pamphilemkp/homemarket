@@ -42,7 +42,7 @@ const Carousel = () => {
             <p className="text-sm sm:w-2/5 w-full">
             {`Experience the Sunday Market from the comfort of your home! We deliver fresh fruits,
             vegetables, and local delicacies straight to your doorstep. No hassle, just the best
-            picks at Sunday Market prices! <br />
+            picks at Sunday Market prices! 
             Get your hands on the season's finest produce—delivered fresh as if you handpicked it
             yourself, all without leaving your home.`}
             </p>
@@ -51,7 +51,7 @@ const Carousel = () => {
         </div>
         <div>
           <div className="relative text-white top-48 flex flex-col items-start gap-y-10">
-            <Title addClass="text-3xl">The Best of Sunday Market, Deliveredt</Title>
+            <Title addClass="text-3xl">The Best of Sunday Market, Delivered</Title>
             <p className="text-sm sm:w-2/5 w-full">
             Why step out when we bring the vibrant Sunday Market to you? Enjoy the same low prices
             and variety you love, without the crowd or commute. <br />

@@ -33,13 +33,13 @@ const Customers = () => {
       id: 3,
       fullname: "Eleni Hadjisavva",
       description: "The variety is amazing! I can get all my favorite Sunday Market goodies without even stepping out. From organic produce to handmade treats, Home Market has it all. The delivery team is so friendly too!",
-      imgSrc: "/images/client3.jpg"
+      imgSrc: "/images/client1.jpg"
     },
     {
       id: 4,
       fullname: "Mustafa Kaya",
       description: "As someone who loves supporting local farmers, Home Market makes it so easy. The convenience of having everything delivered to my place is unmatched. It feels like the market came to me—without the hassle!",
-      imgSrc: "/images/client4.jpg"
+      imgSrc: "/images/client2.jpg"
     }
 
   ];
