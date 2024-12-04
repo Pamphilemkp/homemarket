@@ -7,7 +7,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 Hello,
 
-I worked on the Food Ordering Project, which is a comprehensive web application developed using various technologies.
+I worked on the Grocessery Ordering Project, which is a comprehensive web application developed using various technologies.
 
 ## Project Content and Features
 
