@@ -161,9 +161,9 @@ const Cart = ({ userList }) => {
           <Title addClass="text-[40px]">CART TOTAL</Title>
 
           <div className="mt-6">
-            <b>Subtotal: </b>${cart.total} <br />
-            <b className=" inline-block my-1">Discount: </b>$0.00 <br />
-            <b>Total: </b>${cart.total}
+            <b>Subtotal: </b>₺{cart.total} <br />
+            <b className=" inline-block my-1">Discount: </b>₺0.00 <br />
+            <b>Total: </b>₺{cart.total}
           </div>
 
           <div>
