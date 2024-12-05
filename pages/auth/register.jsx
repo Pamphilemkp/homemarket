@@ -9,6 +9,7 @@ import { useRouter } from "next/router";
 
 const Register = () => {
   const { push } = useRouter();
+
   const onSubmit = async (values, actions) => {
     try {
       const res = await axios.post(
@@ -16,15 +17,24 @@ const Register = () => {
         values
       );
       if (res.status === 200) {
-        toast.success("User created successfully");
+        toast.success("User created successfully", {
+          position: "bottom-left",
+          theme: "colored",
+        });
         push("/auth/login");
       }
     } catch (err) {
-      toast.error(err.response.data.message);
-      console.log(err);
+      const errorMessage =
+        err.response?.data?.message || "Something went wrong!";
+      toast.error(errorMessage, {
+        position: "bottom-left",
+        theme: "colored",
+      });
+      console.error(err);
     }
     actions.resetForm();
   };
+
   const { values, errors, touched, handleSubmit, handleChange, handleBlur } =
     useFormik({
       initialValues: {
@@ -99,7 +109,7 @@ const Register = () => {
           </button>
           <Link href="/auth/login">
             <span className="text-sm underline cursor-pointer text-secondary">
-              Do you have a account?
+              Do you already have an account?
             </span>
           </Link>
         </div>

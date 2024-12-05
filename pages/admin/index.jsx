@@ -7,9 +7,10 @@ import { adminSchema } from "../../schema/admin";
 import { toast } from "react-toastify";
 import { useRouter } from "next/router";
 
-const Login = () => {
+const AdminLogin = () => {
   const { push } = useRouter();
 
+  // Form submission handler
   const onSubmit = async (values, actions) => {
     try {
       const res = await axios.post(
@@ -18,23 +19,34 @@ const Login = () => {
       );
       if (res.status === 200) {
         actions.resetForm();
-        toast.success("Admin Login Success!");
+        toast.success("Admin Login Successful!");
         push("/admin/profile");
       }
     } catch (err) {
-      console.log(err);
+      const errorMessage = err.response?.data?.message || "Login failed!";
+      toast.error(errorMessage);
+      console.error("Admin Login Error:", err);
     }
   };
-  const { values, errors, touched, handleSubmit, handleChange, handleBlur } =
-    useFormik({
-      initialValues: {
-        username: "",
-        password: "",
-      },
-      onSubmit,
-      validationSchema: adminSchema,
-    });
 
+  // Formik setup
+  const {
+    values,
+    errors,
+    touched,
+    handleSubmit,
+    handleChange,
+    handleBlur,
+  } = useFormik({
+    initialValues: {
+      username: "",
+      password: "",
+    },
+    onSubmit,
+    validationSchema: adminSchema,
+  });
+
+  // Input fields configuration
   const inputs = [
     {
       id: 1,
@@ -62,7 +74,7 @@ const Login = () => {
         className="flex flex-col items-center my-20 md:w-1/2 w-full mx-auto"
         onSubmit={handleSubmit}
       >
-        <Title addClass="text-[40px] mb-6">Admin Logina</Title>
+        <Title addClass="text-[40px] mb-6">Admin Login</Title>
         <div className="flex flex-col gap-y-3 w-full">
           {inputs.map((input) => (
             <Input
@@ -74,10 +86,12 @@ const Login = () => {
           ))}
         </div>
         <div className="flex flex-col w-full gap-y-3 mt-6">
-          <button className="btn-primary">LOGIN</button>
+          <button type="submit" className="btn-primary">
+            LOGIN
+          </button>
           <Link href="/">
             <span className="text-sm underline cursor-pointer text-secondary">
-              Home Page
+              Back to Home
             </span>
           </Link>
         </div>
@@ -86,9 +100,13 @@ const Login = () => {
   );
 };
 
+// Server-side authentication check
 export const getServerSideProps = (ctx) => {
-  const myCookie = ctx.req?.cookies || "";
-  if (myCookie.token === process.env.ADMIN_TOKEN) {
+  const cookies = ctx.req?.cookies || {};
+  const adminToken = process.env.ADMIN_TOKEN;
+  // console.log(ctx.req?.cookies)
+
+  if (cookies.token === adminToken) {
     return {
       redirect: {
         destination: "/admin/profile",
@@ -102,4 +120,4 @@ export const getServerSideProps = (ctx) => {
   };
 };
 
-export default Login;
+export default AdminLogin;

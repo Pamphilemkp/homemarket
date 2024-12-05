@@ -19,13 +19,30 @@ const Login = () => {
     let options = { redirect: false, email, password };
     try {
       const res = await signIn("credentials", options);
-      actions.resetForm();
-      toast.success("Login successfully", {
+
+      if (res?.error) {
+        // If there’s an error during sign-in
+        toast.error(res.error, {
+          position: "bottom-left",
+          theme: "colored",
+        });
+      } else {
+        // Successful login
+        toast.success("Login successfully", {
+          position: "bottom-left",
+          theme: "colored",
+        });
+        actions.resetForm();
+        // Redirect on successful login
+        push("/profile");
+      }
+    } catch (err) {
+      // Handle any other unexpected errors
+      console.error(err);
+      toast.error("An unexpected error occurred. Please try again.", {
         position: "bottom-left",
         theme: "colored",
       });
-    } catch (err) {
-      console.log(err);
     }
   };
 
@@ -36,12 +53,18 @@ const Login = () => {
         setCurrentUser(
           res.data?.find((user) => user.email === session?.user?.email)
         );
-        session && push("/profile/" + currentUser?._id);
+        if (session && currentUser) {
+          push("/profile/" + currentUser._id);
+        }
       } catch (err) {
-        console.log(err);
+        console.error(err);
+        toast.error("Failed to fetch user data.", {
+          position: "bottom-left",
+          theme: "colored",
+        });
       }
     };
-    getUser();
+    if (session) getUser();
   }, [session, push, currentUser]);
 
   const { values, errors, touched, handleSubmit, handleChange, handleBlur } =
